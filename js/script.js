@@ -10,9 +10,10 @@ $("#search-button").click(function(){
         url: request_url,
         method: "GET",
         success: function(response) {
+            response.data[0].images.original.url;
             console.log(response);
-            $("body").append("<img src=" + "https://media3.giphy.com/media/4nGYmLsCoHNXa/200w.gif?cid=" +search +  "e1bb72ff5ca5184f78614f724d030c1e"
-            + ">");
+            $("body").append("<img src="+ "response.data[0].images.original.url />");            
+            
            
             
             console.log(search);
@@ -24,36 +25,5 @@ $("#search-button").click(function(){
   
   
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
